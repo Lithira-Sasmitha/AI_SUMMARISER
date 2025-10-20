@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.local.set({ mySetting: true }, () => {
-        if (!XPathResult.geminiApiKey){
+    chrome.storage.sync.get(["geminiApiKey"], (result) => {
+        if (!result.geminiApiKey){
             chrome.tabs.create({ url: 'options.html' });
         }
     });

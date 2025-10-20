@@ -1,0 +1,38 @@
+<html lang="en">
+
+<body style="min-width: 200px; padding: 0; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 300px;">
+    <div style="padding: 20px;">
+        <h2 style="color: white; margin: 0 0 20px 0; font-size: 24px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">AI Summary</h2>
+
+        <div class="options" style="background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 15px;">
+            <select id="Summary-type" style="width: 100%; padding: 10px 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 14px; margin-bottom: 10px; cursor: pointer; transition: border-color 0.3s; outline: none;" 
+                    onmouseover="this.style.borderColor='#667eea'" 
+                    onmouseout="this.style.borderColor='#e0e0e0'"
+                    onfocus="this.style.borderColor='#667eea'">
+                <option value="brief">Brief</option>
+                <option value="detailed">Detailed</option>
+                <option value="bullets">Bullets</option>
+            </select>
+            
+            <div style="display: flex; gap: 10px;">
+                <button id="summarize" style="flex: 1; padding: 10px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);"
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(102, 126, 234, 0.4)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(102, 126, 234, 0.3)'"
+                        onmousedown="this.style.transform='translateY(0)'"
+                        onmouseup="this.style.transform='translateY(-2px)'">
+                    Summarize
+                </button>
+                <button id="copy-btn" style="padding: 10px 20px; background: white; color: #667eea; border: 2px solid #667eea; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;"
+                        onmouseover="this.style.background='#667eea'; this.style.color='white'"
+                        onmouseout="this.style.background='white'; this.style.color='#667eea'">
+                    Copy
+                </button>
+            </div>
+        </div>
+
+        <pre id="result" style="background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); color: #333; font-size: 13px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; margin: 0; min-height: 100px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Select a type and click Summarize...</pre>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
