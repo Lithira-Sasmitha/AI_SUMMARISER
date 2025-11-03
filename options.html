@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extension Options</title>
+  <meta charset="utf-8"/>
+  <title>Extension Options</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
-<body>
-   Hello 
+<body style="margin:0;padding:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;">
+  <div style="max-width:500px;width:90%;background:white;padding:40px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+    <h1 style="margin:0 0 30px 0;font-size:28px;text-align:center;color:#667eea">AI Summary Options</h1>
+
+    <div style="margin-bottom:25px;">
+      <label for="api-Key" style="display:block;color:#333;font-weight:600;margin-bottom:10px;font-size:14px;">Gemini API Key:</label>
+      <input type="text" id="api-Key" placeholder="Enter your API key" style="width:100%;padding:12px 15px;border:2px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;">
+      <p style="margin:10px 0 0 0;color:#666;font-size:13px;">
+        Get your Gemini API key from
+        <a href="https://aistudio.google.com/api-keys" target="_blank" style="color:#667eea;font-weight:600;text-decoration:none;">Google AI Studio</a>
+      </p>
+    </div>
+
+    <button id="save-button" style="width:100%;padding:14px 20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;">Save Settings</button>
+
+    <p id="success-message" style="margin:15px 0 0 0;padding:12px 15px;background:linear-gradient(135deg,#11998e 0%,#38ef7d 100%);color:white;border-radius:8px;text-align:center;font-weight:600;font-size:14px;opacity:0;transition:opacity .3s;">Settings saved successfully!</p>
+  </div>
+
+  <script src="options.js"></script>
 </body>
 </html>
